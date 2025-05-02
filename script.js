@@ -36,8 +36,10 @@ function getDifficultySettings() {
   } else if (selected === "impossible")  {
     pipeSpeed = 20;
     gravity = 0.7;
+    pipe_gap = 115
   } else if (selected === "mystery")  {
-    pipeSpeed = Math.floor(Math.random() * 30) + 1;
+    pipeSpeed = Math.floor(Math.random() * 30) + 1;  
+    score = Math.floor(Math.random() * 50) + 1;
   }
 }
 
@@ -248,12 +250,12 @@ start_btn.addEventListener("click", () => {
 let musicMuted = false;
 
 // Load sound effects
-const flapSound = new Audio("sounds/flap.mp3");
-const scoreSound = new Audio("sounds/score.mp3");
-const hitSound = new Audio("sounds/hit.mp3");
+const flapSound = new Audio("/asset/birds-flapping-wings-14763.mp3");
+const scoreSound = new Audio("/asset/applause-sound-effect-240470.mp3");
+const hitSound = new Audio("/asset/hit-sound-effect-240898.mp3");
 
 // Load background music
-const backgroundMusic = new Audio("sounds/background.mp3");
+const backgroundMusic = new Audio("/asset/suspence-background-25609.mp3");
 backgroundMusic.loop = true; // music should keep playing
 backgroundMusic.volume = 0.5; // adjust volume
 backgroundMusic.play();
